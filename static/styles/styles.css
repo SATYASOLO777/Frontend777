@@ -1,0 +1,128 @@
+body {
+    font-family: Book Antiqua;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+header {
+    font-family: Algerian ;
+    background-color: #000000;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+header p {
+    font-family: Gadugi;
+    color : #ffffff;
+    text-transform: none;
+}
+
+nav ul {
+    font-family: Gadugi;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#filters {
+    padding: 20px;
+    text-align: right;
+    background-color: #000000;
+    border-bottom: 3px solid #ffffff;
+}
+
+#filters input, #filters select {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1rem;
+    border-radius: 33px;
+    border: 5px solid #52c904;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.movie-card {
+    background-color: #f1f3f4;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.movie-card:hover {
+    transform: scale(1.1);
+}
+
+.movie-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.movie-card h3 {
+    margin: 10px 0;
+    color: #0919f6;
+}
+
+.movie-card p {
+    color: #2811f3;
+}
+
+button {
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+#movie-details {
+    text-align: center;
+    padding: 20px;
+}
+
+#movie-details img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#movie-details p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+    text-transform: none;
+}
+
+#movie-details .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Home</title>
+    <link rel="stylesheet" href="static/styles/styles.css">
+
+</head>
+<body>
+    <header>
+        <h1>Movies Home</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/movies">Movies</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="mailto:satyasolo317@gmail.com">Contact</a></li> <!-- Replace with your email -->
+            </ul>
+        </nav>
+        <p>Hello friends.I have created this website for watching and downloading movies.I think you like this website.If you want any movies,contact me.I will add this movies in this website.You can either watch it or download it.Thanks for visiting...</p>
+    </header>
+
+    <section id="filters">
+        <input type="text" id="search" placeholder="Search for a movie" oninput="filterMovies()">
+        <select id="genre-filter" onchange="filterMovies()">
+            <option value="">All Genres</option>
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <option value="Horror">Horror</option>
+            <option value="Adventure">Adventure</option>
+        </select>
+    </section>
+    <main>
+        <div class="movie-grid" id="movie-grid"></div>
+    </main>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>
