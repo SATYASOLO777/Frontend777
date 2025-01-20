@@ -14,7 +14,6 @@ async function filterMovies() {
         console.error('Failed to fetch movies:', error);
     }
 }
-
 const movies = [
     { 'title': 'Pirates', 'genre': 'Adventure', 'imageUrl': 'static/images/imagepoc.jpg', 'moviePath': 'static/videos/pirates.mp4' },
     { 'title': 'Movie 2', 'genre': 'Comedy', 'imageUrl': 'static/images/movie2.jpg', 'moviePath': 'static/videos/movie2.mp4' },
