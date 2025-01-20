@@ -1,7 +1,3 @@
-// Get the movie ID from the URL
-const urlParams = new URLSearchParams(window.location.search);
-const movieId = parseInt(urlParams.get('id'), 10);
-
 // Sample movie list (same as the one in your home page)
 const movies = [
     { 'title': 'Pirates', 'genre': 'Adventure', 'imageUrl': 'static/images/imagepoc.jpg', 'moviePath': 'static/videos/pirates.mp4','description': 'This is an adventurous film.' },
@@ -11,10 +7,11 @@ const movies = [
     { 'title': 'Movie 5', 'genre': 'Adventure', 'imageUrl': 'static/images/movie5.jpg', 'moviePath': 'static/videos/movie5.mp4' }
 ];
 
-function getMovieDetails() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const movieId = parseInt(urlParams.get('id'), 10);
-    const movie = movies[movieId];
+async function getMovieDetails() {
+    const movieId = parseInt(new URLSearchParams(window.location.search).get('id'), 10);
+    
+    const response = await fetch(`https://backend777.onrender.com/api/movies/${movieId}`);
+    const movie = await response.json();
 
     if (movie) {
         const detailsContainer = document.getElementById('movie-details');
